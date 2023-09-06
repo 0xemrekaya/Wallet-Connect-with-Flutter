@@ -62,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(height: 100),
               isConnected == true
                   ? ElevatedButton(
-                      onPressed: () {
-                        service.disconnect();
-                        service.close();
+                      onPressed: () async{
+                       await service.disconnect();
+                       service.close();
                         setState(() {
                           isConnected = false;
                         });
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const SizedBox(height: 50),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Text("Connected: ${service.address} ${service.isOpen}"),
+                child: Text("Connected: ${service.address}"),
               ),
             ],
           ),
