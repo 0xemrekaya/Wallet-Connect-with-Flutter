@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:walletconnect_modal_flutter/walletconnect_modal_flutter.dart';
 import 'screens/my_home_page.dart';
